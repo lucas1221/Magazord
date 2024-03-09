@@ -13,6 +13,7 @@
     "@types/react": "~18.2.45",
     "axios": "^1.6.7",
     "expo": "~50.0.11",
+    "expo-linear-gradient": "^12.7.2",
     "expo-status-bar": "~1.11.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
