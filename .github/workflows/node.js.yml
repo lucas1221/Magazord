@@ -26,34 +26,40 @@ jobs:
         yarn global add expo-cli
         cd magazord
         yarn install
+        yarn add react-native-safe-area-context@4.8.2
         npx expo-doctor
         npx expo install --fix
         expo start
         cd ..
         cd magazord-tarefa2-ReactNative
         yarn install
+        yarn add react-native-safe-area-context@4.8.2
         npx expo-doctor
         npx expo install --fix
         expo start
         cd ..
         cd magazord-tarefa3-ReactNative
         yarn install
+        yarn add react-native-safe-area-context@4.8.2
         npx expo-doctor
         npx expo install --fix
         expo start
         cd ..
         cd magazord-tarefa4-ReactNative
         yarn install
+        yarn add react-native-safe-area-context@4.8.2
         npx expo-doctor
         npx expo install --fix
         expo start
         cd ..
         cd magazord-tarefa5-ReactNative
         yarn install
+        yarn add react-native-safe-area-context@4.8.2
         npx expo-doctor
         npx expo install --fix
         expo start
         cd ..
+
 
 
 
