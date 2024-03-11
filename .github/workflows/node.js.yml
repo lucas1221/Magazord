@@ -1,0 +1,50 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Usar o Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - name: Instalando dependências e builds
+      run: |
+        npm install -g expo-cli
+        cd magazord
+        npm install
+        npm run build
+        expo start
+        cd ../magazord-tarefa2-ReactNative
+        npm install
+        npm run build
+        expo start
+        cd ../magazord-tarefa3-ReactNative
+        npm install
+        npm run build
+        expo start
+        cd ../magazord-tarefa4-ReactNative
+        npm install
+        npm run build
+        expo start
+        cd ../magazord-tarefa5-ReactNative
+        npm install
+        npm run build
+        expo start
+        cd ..
+
+
