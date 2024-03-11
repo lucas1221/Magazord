@@ -21,34 +21,40 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Instalar dependências
+    - name: Instalar dependências e iniciar
       run: |
         yarn global add expo-cli
         cd magazord
         yarn install
+        yarn add react-native-safe-area-context@4.8.2
         npx expo-doctor
         npx expo install --fix
         cd ..
         cd magazord-tarefa2-ReactNative
         yarn install
+        yarn add react-native-safe-area-context@4.8.2
         npx expo-doctor
         npx expo install --fix
         cd ..
         cd magazord-tarefa3-ReactNative
         yarn install
+        yarn add react-native-safe-area-context@4.8.2
         npx expo-doctor
         npx expo install --fix
         cd ..
         cd magazord-tarefa4-ReactNative
         yarn install
+        yarn add react-native-safe-area-context@4.8.2
         npx expo-doctor
         npx expo install --fix
         cd ..
         cd magazord-tarefa5-ReactNative
         yarn install
+        yarn add react-native-safe-area-context@4.8.2
         npx expo-doctor
         npx expo install --fix
         cd ..
+
 
 
 
