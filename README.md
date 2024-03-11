@@ -52,7 +52,9 @@ Para executar o código, você precisa ter o [Expo](https://docs.expo.dev/get-st
 
 - Clone este repositório para o seu computador.
 - Abra o terminal e navegue até a pasta do projeto.
-- Execute o comando `yarn install` ou `npm install` para instalar as dependências. Isso é necessário em cada pasta de cada tarefa.
+- É Necessário o Node 18 ou Superior
+- É Necessário o uso do Yarn
+- Execute o comando `yarn install` para instalar as dependências. Isso é necessário em cada pasta de cada tarefa.
 - Execute o comando `expo start` para iniciar o servidor do Expo.
 - Abra o aplicativo do Expo Go no seu celular (Pode ser baixado na [Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=www&pli=1) ou [App Store](https://apps.apple.com/us/app/expo-go/id982107779) e escaneie o QR code que aparece no terminal ou no navegador.
 - Aguarde o aplicativo ser carregado !
