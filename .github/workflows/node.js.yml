@@ -27,30 +27,35 @@ jobs:
         cd magazord
         yarn install
         yarn add react-native-safe-area-context@4.8.2
+        yarn add @react-native-async-storage/async-storage@1.21.0
         npx expo-doctor
         npx expo install --fix
         cd ..
         cd magazord-tarefa2-ReactNative
         yarn install
         yarn add react-native-safe-area-context@4.8.2
+        yarn add @react-native-async-storage/async-storage@1.21.0
         npx expo-doctor
         npx expo install --fix
         cd ..
         cd magazord-tarefa3-ReactNative
         yarn install
         yarn add react-native-safe-area-context@4.8.2
+        yarn add @react-native-async-storage/async-storage@1.21.0
         npx expo-doctor
         npx expo install --fix
         cd ..
         cd magazord-tarefa4-ReactNative
         yarn install
         yarn add react-native-safe-area-context@4.8.2
+        yarn add @react-native-async-storage/async-storage@1.21.0
         npx expo-doctor
         npx expo install --fix
         cd ..
         cd magazord-tarefa5-ReactNative
         yarn install
         yarn add react-native-safe-area-context@4.8.2
+        yarn add @react-native-async-storage/async-storage@1.21.0
         npx expo-doctor
         npx expo install --fix
         cd ..
