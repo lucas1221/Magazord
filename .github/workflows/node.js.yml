@@ -1,4 +1,4 @@
-name: Node.js CI
+name: CI Node.js
 
 on:
   push:
@@ -17,12 +17,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Usar Node.js e Yarn ${{ matrix.node-version }}
+    - name: Usar Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn'
-    - name: Instalar dependências e build
+    - name: Instalar dependências e construir
       run: |
         npm install -g expo-cli
         cd magazord
@@ -46,6 +46,7 @@ jobs:
         yarn build
         expo start
         cd ..
+
 
 
 
