@@ -17,34 +17,35 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Usar o Node.js ${{ matrix.node-version }}
+    - name: Usar Node.js e Yarn ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - name: Instalando dependências e builds
+        cache: 'yarn'
+    - name: Instalar dependências e build
       run: |
         npm install -g expo-cli
         cd magazord
-        npm install
-        npm run build
+        yarn install
+        yarn build
         expo start
         cd ../magazord-tarefa2-ReactNative
-        npm install
-        npm run build
+        yarn install
+        yarn build
         expo start
         cd ../magazord-tarefa3-ReactNative
-        npm install
-        npm run build
+        yarn install
+        yarn build
         expo start
         cd ../magazord-tarefa4-ReactNative
-        npm install
-        npm run build
+        yarn install
+        yarn build
         expo start
         cd ../magazord-tarefa5-ReactNative
-        npm install
-        npm run build
+        yarn install
+        yarn build
         expo start
         cd ..
+
 
 
