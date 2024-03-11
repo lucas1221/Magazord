@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x]
+        node-version: [18.x, 20.x, 22.x]
 
     steps:
     - uses: actions/checkout@v3
@@ -26,29 +26,30 @@ jobs:
         npm install -g expo-cli
         cd magazord
         yarn install
-        expo doctor --fix-dependencies
+        npx expo-doctor --fix-dependencies
         expo start
         cd ..
         cd magazord-tarefa2-ReactNative
         yarn install
-        expo doctor --fix-dependencies
+        npx expo-doctor --fix-dependencies
         expo start
         cd ..
         cd magazord-tarefa3-ReactNative
         yarn install
-        expo doctor --fix-dependencies
+        npx expo-doctor --fix-dependencies
         expo start
         cd ..
         cd magazord-tarefa4-ReactNative
         yarn install
-        expo doctor --fix-dependencies
+        npx expo-doctor --fix-dependencies
         expo start
         cd ..
         cd magazord-tarefa5-ReactNative
         yarn install
-        expo doctor --fix-dependencies
+        npx expo-doctor --fix-dependencies
         expo start
         cd ..
+
 
 
 
