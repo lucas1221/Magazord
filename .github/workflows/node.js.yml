@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x]
+        node-version: [18.x, 20.x, 22.x]
 
     steps:
     - uses: actions/checkout@v3
@@ -49,6 +49,7 @@ jobs:
         npx expo-doctor --fix-dependencies
         expo start
         cd ..
+
 
 
 
