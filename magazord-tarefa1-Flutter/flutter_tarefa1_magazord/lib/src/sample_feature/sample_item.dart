@@ -1,6 +1,15 @@
-/// A placeholder class that represents an entity or model.
+// sample_item.dart
 class SampleItem {
-  const SampleItem(this.id);
-
   final int id;
+  final String title;
+  final String description;
+  bool completed;
+
+  SampleItem({
+    required this.id,
+    required this.title,
+    required this.description,
+    this.completed = false,
+  });
 }
+

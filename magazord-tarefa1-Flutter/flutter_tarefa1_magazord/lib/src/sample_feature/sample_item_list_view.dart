@@ -1,71 +1,55 @@
+// sample_item_list_view.dart
 import 'package:flutter/material.dart';
-
-import '../settings/settings_view.dart';
 import 'sample_item.dart';
-import 'sample_item_details_view.dart';
 
-/// Displays a list of SampleItems.
-class SampleItemListView extends StatelessWidget {
-  const SampleItemListView({
-    super.key,
-    this.items = const [SampleItem(1), SampleItem(2), SampleItem(3)],
-  });
-
-  static const routeName = '/';
-
-  final List<SampleItem> items;
-
+class SampleItemListView extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Sample Items'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.settings),
-            onPressed: () {
-              // Navigate to the settings page. If the user leaves and returns
-              // to the app after it has been killed while running in the
-              // background, the navigation stack is restored.
-              Navigator.restorablePushNamed(context, SettingsView.routeName);
+  _SampleItemListViewState createState() => _SampleItemListViewState();
+}
+
+class _SampleItemListViewState extends State<SampleItemListView> {
+  List<SampleItem> tasks = [
+    SampleItem(id: 1, title: "Tarefa 1", description: "Descrição da Tarefa 1"),
+    SampleItem(id: 2, title: "Tarefa 2", description: "Descrição da Tarefa 2", completed: true),
+    SampleItem(id: 3, title: "Tarefa 3", description: "Descrição da Tarefa 3", completed: true),
+    SampleItem(id: 4, title: "Tarefa 4", description: "Descrição da Tarefa 4", completed: true),
+    SampleItem(id: 5, title: "Tarefa 5", description: "Descrição da Tarefa 5", completed: true),
+    SampleItem(id: 6, title: "Tarefa 6", description: "Descrição da Tarefa 6", completed: true),
+    // ... adicione mais tarefas conforme necessário
+  ];
+
+@override
+Widget build(BuildContext context) {
+  return ListView.builder(
+    itemCount: tasks.length,
+    itemBuilder: (context, index) {
+      return Material(
+        elevation: 5.0, 
+        borderRadius: BorderRadius.circular(10.0), 
+        child: ListTile(
+          tileColor: tasks[index].completed ? Colors.green[100] : Colors.red[100], 
+          title: Text(
+            tasks[index].title,
+            style: TextStyle(
+              fontWeight: FontWeight.bold, 
+              color: tasks[index].completed ? Colors.green : Colors.red, 
+            ),
+          ),
+          subtitle: Text(tasks[index].description),
+          trailing: Checkbox(
+            value: tasks[index].completed,
+            onChanged: (bool? value) {
+              setState(() {
+                tasks[index].completed = value!;
+              });
             },
           ),
-        ],
-      ),
-
-      // To work with lists that may contain a large number of items, it’s best
-      // to use the ListView.builder constructor.
-      //
-      // In contrast to the default ListView constructor, which requires
-      // building all Widgets up front, the ListView.builder constructor lazily
-      // builds Widgets as they’re scrolled into view.
-      body: ListView.builder(
-        // Providing a restorationId allows the ListView to restore the
-        // scroll position when a user leaves and returns to the app after it
-        // has been killed while running in the background.
-        restorationId: 'sampleItemListView',
-        itemCount: items.length,
-        itemBuilder: (BuildContext context, int index) {
-          final item = items[index];
-
-          return ListTile(
-            title: Text('SampleItem ${item.id}'),
-            leading: const CircleAvatar(
-              // Display the Flutter Logo image asset.
-              foregroundImage: AssetImage('assets/images/flutter_logo.png'),
-            ),
-            onTap: () {
-              // Navigate to the details page. If the user leaves and returns to
-              // the app after it has been killed while running in the
-              // background, the navigation stack is restored.
-              Navigator.restorablePushNamed(
-                context,
-                SampleItemDetailsView.routeName,
-              );
-            }
-          );
-        },
-      ),
-    );
-  }
+        ),
+      );
+    },
+  );
 }
+
+}
+
+
