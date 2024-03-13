@@ -61,7 +61,15 @@ Para executar o código, você precisa ter o [Expo](https://docs.expo.dev/get-st
 
 ## Como executar o código - Flutter
 
-  Em construção 🚧 
+Por meio da extensão oficial do Flutter no VSCode foi possível executar o código para realizar as depurações. 
+
+Iniciar o app
+
+Primeiro, abra o arquivo `lib/main.dart` e verifique se o dispositivo de destino está selecionado. No canto inferior direito do VS Code, você encontra um botão que mostra o dispositivo de destino atual. Clique nele para mudar.
+
+Enquanto `lib/main.dart` estiver aberto, procure o botão "play" no canto superior direito da janela do VS Code e clique nele.
+
+Após cerca de um minuto, o app é iniciado no modo de depuração.
 
 ## Considerações sobre o Desenvolvimento
 
