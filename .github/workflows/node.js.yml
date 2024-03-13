@@ -28,6 +28,7 @@ jobs:
         yarn install
         yarn add react-native-safe-area-context@4.8.2
         yarn add @react-native-async-storage/async-storage@1.21.0
+        yarn add expo@50.0.13  # Adicione esta linha
         npx expo-doctor
         npx expo install --fix
         cd ..
@@ -35,6 +36,7 @@ jobs:
         yarn install
         yarn add react-native-safe-area-context@4.8.2
         yarn add @react-native-async-storage/async-storage@1.21.0
+        yarn add expo@50.0.13  # Adicione esta linha
         npx expo-doctor
         npx expo install --fix
         cd ..
@@ -42,6 +44,7 @@ jobs:
         yarn install
         yarn add react-native-safe-area-context@4.8.2
         yarn add @react-native-async-storage/async-storage@1.21.0
+        yarn add expo@50.0.13  # Adicione esta linha
         npx expo-doctor
         npx expo install --fix
         cd ..
@@ -49,6 +52,7 @@ jobs:
         yarn install
         yarn add react-native-safe-area-context@4.8.2
         yarn add @react-native-async-storage/async-storage@1.21.0
+        yarn add expo@50.0.13  # Adicione esta linha
         npx expo-doctor
         npx expo install --fix
         cd ..
@@ -56,6 +60,7 @@ jobs:
         yarn install
         yarn add react-native-safe-area-context@4.8.2
         yarn add @react-native-async-storage/async-storage@1.21.0
+        yarn add expo@50.0.13  # Adicione esta linha
         npx expo-doctor
         npx expo install --fix
         cd ..
